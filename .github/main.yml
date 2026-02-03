@@ -3,8 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # chaque push sur la branche main déclenche le workflow
-
+      - main  
 jobs:
   build:
     runs-on: ubuntu-latest
