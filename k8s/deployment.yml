@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-website
+  template:
+    metadata:
+      labels:
+        app: demo-website
+    spec:
+      containers:
+      - name: demo-website
+        image: hadiris/demo-website:latest
+        ports:
+        - containerPort: 80
